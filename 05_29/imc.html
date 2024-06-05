@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Calculadora IMC</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script>
+
+            alert("Bem vindo");
+            let peso = prompt("Digite seu peso: ");
+            peso = Number(peso);
+            let altura = prompt("Digite sua altura: ");
+            altura = Number(altura);
+
+            let IMC = peso / (altura **2);
+
+            IMC *= 100
+            IMC = Math.round(IMC); 
+            IMC /= 100
+
+            console.log("O seu Índice de Massa Corporal é: " + IMC);
+            alert("O seu Índice de Massa Corporal é: " + IMC);
+
+            if(IMC < 18.49){
+                console.log("Abaixo do normal");
+            }else if (IMC < 24.99){
+                console.log("Faixa saudável");
+            }else if (IMC <= 30){
+                console.log("Acima do peso");
+            }else if (IMC <= 35){
+                console.log("Obesidade Grau I");
+            }else if(IMC <= 40){
+                console.log("Obesidade Grau II");
+            }else 
+                console.log("Obesidade Grau III");
+
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+
+</html>

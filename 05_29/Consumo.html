@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Consumo</title>
+        <script>
+
+            /*
+            Crie um algoritmo que recebe o km inicial, o km final, preço da gasolina e autonomia do veiculo
+            Ao final, deve exibir a distancia percorrida, quantidade de litros gastos e o custo da viagem.
+            */
+
+            let kmInicial = prompt("Digite o Km inicial: ");
+            let kmFinal = prompt("Digite o Km final: ");
+            let priceGas = prompt("Qual o preço da gasolina? ");
+            let aut = prompt("Qual a autonomia do veículo? ");
+
+            kmInicial = Number(kmInicial);
+            kmFinal = Number(kmFinal);
+            priceGas = Number(priceGas);
+            aut = Number(aut);
+
+            let dist = (kmFinal - kmInicial);
+
+            dist *= 100
+            dist = Math.round(dist)
+            dist /= 100
+
+            let liters = (dist / aut);
+
+            liters *= 100
+            liters = Math.round(liters)
+            liters /= 100
+
+            let cost = (liters * priceGas);
+
+            cost *= 100
+            cost = Math.round(cost)
+            cost /= 100
+
+            console.log("A distancia percorrida foi: " + dist + "Km");
+            console.log("A quantidade de litros gastos foi: " + liters + "L");
+            console.log("O custo da viagem foi de: " + cost + "R$");
+            
+            alert("A distancia percorrida foi: " + dist + "Km");
+            alert("A quantidade de litros gastos foi: " + liters + "L");
+            alert("O custo da viagem foi de: " + cost + "R$");
+
+        </script>
+    </head>
+
+    <body>
+           <h1>Consumo</h1> 
+           <p>Confira o console, teclando "F12"</p>
+    </body>
+</html>
